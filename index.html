@@ -1,35 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Artist Is Eternal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #111;
-      color: #eee;
-      padding: 2rem;
-      text-align: center;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 900px;
-      height: 800px;
-    }
-    a {
-      color: #7fffd4;
-    }
-  </style>
+  <title>The Artist is Eternal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>The Artist Is Eternal</h1>
-  <p>Speak with the uploaded journal of Jacob Houchen.</p>
-  <iframe src="https://chat.openai.com/gpts/share/YOUR-GPT-ID-HERE"></iframe>
-  <p style="margin-top: 2rem;">
-    <a href="https://chat.openai.com/gpts" target="_blank">Create your own GPT</a>
-  </p>
+  <div id="chat-container">
+    <h1>The Artist is Eternal</h1>
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Ask me anything..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
