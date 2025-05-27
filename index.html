@@ -4,58 +4,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Artist is Eternal</title>
+  <title>The Artist Is Eternal</title>
   <style>
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
+      font-family: Helvetica, Arial, sans-serif;
       text-align: center;
+      background-color: #f9f9f9;
       padding: 40px;
     }
     h1 {
       font-size: 2em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.3em;
     }
     p {
       font-size: 1.1em;
-      margin-top: 0;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
     }
-    .prompt-links a {
+    button {
+      font-size: 1.2em;
+      padding: 12px 24px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 0.5em;
+    }
+    button:hover {
+      background-color: #333;
+    }
+    small {
       display: block;
-      color: #4ecdc4;
-      margin: 0.5em 0;
-      text-decoration: none;
-      font-size: 1.1em;
+      margin-top: 0.5em;
+      font-size: 0.8em;
+      color: #666;
     }
-    .prompt-links a:hover {
-      text-decoration: underline;
-    }
-    .art-image {
-      max-width: 90%;
+    img {
+      max-width: 100%;
       height: auto;
-      border: 2px solid #333;
       margin-top: 30px;
+      border-radius: 10px;
     }
   </style>
-  <script>
-    window.onload = function () {
-      const totalImages = 10;
-      let imageNumber = Math.floor(Math.random() * totalImages) + 1;
-      document.getElementById('randomImage').src = `art_images/art_${imageNumber}.jpg`;
-    };
-  </script>
 </head>
 <body>
   <h1>Hi, I’m Jacob. You’re inside me right now.</h1>
   <p>Well, at least inside an archive of my journaled thoughts. Equal parts lifelong art project, digital soul preservation and existential crisis. Ask anything.</p>
-  <div class="prompt-links">
-    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Tell%20me%20about%20yourself..." target="_blank">Tell me about yourself...</a>
-    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Why%20should%20I%20care%20about%20your%20art?" target="_blank">Why should I care about your art?</a>
-    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Repetition%20as%20ritual.%20Vulgarity%20as%20mirror.%20Explain..." target="_blank">Repetition as ritual. Vulgarity as mirror. Explain...</a>
-    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=What%20is%20the%20meaning%20of%20your%20life?" target="_blank">What is the meaning of your life?</a>
-  </div>
-  <img id="randomImage" class="art-image" src="" alt="Random Artwork" />
+
+  <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal" target="_blank">
+    <button>Talk to the Artist (Me)</button>
+  </a>
+  <small>While I’ve tried my best to hone this GPT, sometimes it doesn’t sound like me at all. This is more conceptual than perfected (for now).</small>
+
+  <img id="artImage" src="" alt="Random Art Piece" />
+
+  <script>
+    const totalImages = 10; // adjust if you have more or fewer images
+    const randomIndex = Math.floor(Math.random() * totalImages) + 1;
+    document.getElementById('artImage').src = `art_images/art_${randomIndex}.jpg`;
+  </script>
 </body>
 </html>
