@@ -4,19 +4,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Artist Is Eternal</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>The Artist is Eternal</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.1em;
+      margin-top: 0;
+      margin-bottom: 2em;
+    }
+    .prompt-links a {
+      display: block;
+      color: #4ecdc4;
+      margin: 0.5em 0;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .prompt-links a:hover {
+      text-decoration: underline;
+    }
+    .art-image {
+      max-width: 90%;
+      height: auto;
+      border: 2px solid #333;
+      margin-top: 30px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      const totalImages = 10;
+      let imageNumber = Math.floor(Math.random() * totalImages) + 1;
+      document.getElementById('randomImage').src = `art_images/art_${imageNumber}.jpg`;
+    };
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>The Artist Is Eternal</h1>
-    <p>
-      Hi, I’m Jacob. You’re inside me right now. Well, at least inside an archive of my journaled thoughts.
-      This is equal parts continuous/lifelong art project, digital soul preservation, and existential crisis. Ask anything.
-    </p>
-    <a class="chat-button" href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal" target="_blank">
-      Talk to the Artist
-    </a>
+  <h1>Hi, I’m Jacob. You’re inside me right now.</h1>
+  <p>Well, at least inside an archive of my journaled thoughts. Equal parts lifelong art project, digital soul preservation and existential crisis. Ask anything.</p>
+  <div class="prompt-links">
+    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Tell%20me%20about%20yourself..." target="_blank">Tell me about yourself...</a>
+    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Why%20should%20I%20care%20about%20your%20art?" target="_blank">Why should I care about your art?</a>
+    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=Repetition%20as%20ritual.%20Vulgarity%20as%20mirror.%20Explain..." target="_blank">Repetition as ritual. Vulgarity as mirror. Explain...</a>
+    <a href="https://chatgpt.com/g/g-6835d2dfb1348191a89cafcaed831053-the-artist-is-eternal?q=What%20is%20the%20meaning%20of%20your%20life?" target="_blank">What is the meaning of your life?</a>
   </div>
+  <img id="randomImage" class="art-image" src="" alt="Random Artwork" />
 </body>
 </html>
